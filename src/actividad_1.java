@@ -8,7 +8,7 @@ public class actividad_1 {
 		
 		
 		System.out.println("Actividad B");
-		int[] respuesta= actB(10,25,3,"mayor");
+		int[] respuesta= actB(10,25,3,"menor");
 		for(int i=0; i<respuesta.length;i++) {
 			System.out.print(respuesta[i]+ " ");
 		}
@@ -62,13 +62,15 @@ public class actividad_1 {
 				
 			}
 		else {
-			for(int i=0;i<resultado.length;i++) {
-				for(int j=i+1; j<resultado.length;j++) {
+			for(int i=resultado.length-1;i>=0;i--) {
+				for(int j=i-1; j>=0;j--) {
 					if(resultado[i]<resultado[j]) {
-						auxiliar=resultado[j];
-						resultado[j]=resultado[i];
-						resultado[i]=auxiliar;					}
-				}
+						auxiliar=resultado[i];
+						resultado[i]=resultado[j];
+						resultado[j]=auxiliar;					}
+	
+	
+	}
 			}
 		}
 		
